@@ -17,7 +17,7 @@ const Home = () => {
           py: { xs: 12, md: 20 }, // Aumentando o padding vertical
           minHeight: { xs: '400px', md: '600px' }, // Altura responsiva
           textAlign: 'center',
-          backgroundImage: 'url(/images/chocolate-background.jpg)',
+          backgroundImage: 'url(/dotan.github.io/images/chocolate-background.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed', // Efeito parallax
@@ -111,7 +111,7 @@ const Home = () => {
               <CardMedia
                 component="img"
                 height="200"
-                image="/images/qualidade.jpg"
+                image="/dotan.github.io/images/qualidade.jpg"
                 alt="Qualidade"
                 sx={{
                   objectFit: 'cover'
@@ -143,7 +143,7 @@ const Home = () => {
               <CardMedia
                 component="img"
                 height="200"
-                image="/images/inovacao.jpg"
+                image="/dotan.github.io/images/inovacao.jpg"
                 alt="Inovação"
                 sx={{
                   objectFit: 'cover'

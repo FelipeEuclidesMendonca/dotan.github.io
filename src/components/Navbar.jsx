@@ -23,13 +23,9 @@ const Navbar = () => {
             }}
           >
             <img 
-              src="/logo-dotan.png" 
+              src="/dotan.github.io/logo-dotan.png" 
               alt="Dotan Logo" 
-              style={{ 
-                height: '80px',
-                width: 'auto',
-                marginRight: '24px'
-              }}
+              style={{ height: '40px' }} 
             />
           </Box>
           <Box sx={{ display: 'flex', gap: 2 }}>
