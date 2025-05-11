@@ -56,7 +56,7 @@ const Navbar = () => {
             }}
           >
             <img 
-              src="/dotan.github.io/logo-dotan.png" 
+              src="/logo-dotan.png" 
               alt="Dotan Logo" 
               style={{ height: '40px' }} 
             />

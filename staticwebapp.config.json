@@ -8,6 +8,18 @@
       "route": "/*",
       "serve": "/index.html",
       "statusCode": 200
+    },
+    {
+      "route": "/images/*",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "route": "/*.{png,jpg,gif,svg}",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     }
   ],
   "responseOverrides": {
