@@ -1,7 +1,40 @@
-import { AppBar, Toolbar, Button, Box, Container } from '@mui/material';
+import { AppBar, Toolbar, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const menuItems = [
+    { text: 'Início', path: '/' },
+    { text: 'Produtos', path: '/produtos' },
+    { text: 'Sobre', path: '/sobre' },
+    { text: 'Contato', path: '/contato' },
+  ];
+
+  const drawer = (
+    <List>
+      {menuItems.map((item) => (
+        <ListItem 
+          button 
+          key={item.text} 
+          component={RouterLink} 
+          to={item.path}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemText primary={item.text} />
+        </ListItem>
+      ))}
+    </List>
+  );
+
   return (
     <AppBar 
       position="static" 
@@ -28,56 +61,55 @@ const Navbar = () => {
               style={{ height: '40px' }} 
             />
           </Box>
-          <Box sx={{ display: 'flex', gap: 2 }}>
-            <Button 
-              color="primary" 
-              component={RouterLink} 
-              to="/"
-              sx={{ 
-                color: '#333',
-                fontSize: '1.1rem',
-                fontWeight: 500
-              }}
-            >
-              Início
-            </Button>
-            <Button 
-              color="primary" 
-              component={RouterLink} 
-              to="/produtos"
-              sx={{ 
-                color: '#333',
-                fontSize: '1.1rem',
-                fontWeight: 500
-              }}
-            >
-              Produtos
-            </Button>
-            <Button 
-              color="primary" 
-              component={RouterLink} 
-              to="/sobre"
-              sx={{ 
-                color: '#333',
-                fontSize: '1.1rem',
-                fontWeight: 500
-              }}
-            >
-              Sobre
-            </Button>
-            <Button 
-              color="primary" 
-              component={RouterLink} 
-              to="/contato"
-              sx={{ 
-                color: '#333',
-                fontSize: '1.1rem',
-                fontWeight: 500
-              }}
-            >
-              Contato
-            </Button>
-          </Box>
+          
+          {isMobile ? (
+            <>
+              <IconButton
+                color="primary"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2 }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Drawer
+                variant="temporary"
+                anchor="right"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{
+                  keepMounted: true, // Better open performance on mobile.
+                }}
+                sx={{
+                  '& .MuiDrawer-paper': { 
+                    boxSizing: 'border-box', 
+                    width: 240,
+                  },
+                }}
+              >
+                {drawer}
+              </Drawer>
+            </>
+          ) : (
+            <Box sx={{ display: 'flex', gap: 2 }}>
+              {menuItems.map((item) => (
+                <Button 
+                  key={item.text}
+                  color="primary" 
+                  component={RouterLink} 
+                  to={item.path}
+                  sx={{ 
+                    color: '#333',
+                    fontSize: '1.1rem',
+                    fontWeight: 500
+                  }}
+                >
+                  {item.text}
+                </Button>
+              ))}
+            </Box>
+          )}
         </Toolbar>
       </Container>
     </AppBar>
