@@ -2,10 +2,6 @@ import { Container, Typography, Box, Grid, Button, Card, CardContent, CardMedia 
 import { Link as RouterLink } from 'react-router-dom';
 
 const Home = () => {
-  // Tentando diferentes formas de carregar a imagem
-  const imagePath = new URL('../assets/images/chocolate-background.jpg', import.meta.url).href;
-  console.log('Caminho da imagem:', imagePath);
-
   return (
     <Box>
       {/* Hero Section */}
@@ -14,13 +10,13 @@ const Home = () => {
         sx={{
           position: 'relative',
           color: 'white',
-          py: { xs: 12, md: 20 }, // Aumentando o padding vertical
-          minHeight: { xs: '400px', md: '600px' }, // Altura responsiva
+          py: { xs: 12, md: 20 },
+          minHeight: { xs: '400px', md: '600px' },
           textAlign: 'center',
           backgroundImage: 'url(/images/chocolate-background.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed', // Efeito parallax
+          backgroundAttachment: 'fixed',
           '&::before': {
             content: '""',
             position: 'absolute',
@@ -29,7 +25,7 @@ const Home = () => {
             right: 0,
             bottom: 0,
             backgroundColor: 'primary.main',
-            opacity: 0.75, // Ajustando a opacidade
+            opacity: 0.75,
             zIndex: 1,
           }
         }}
