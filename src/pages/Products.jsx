@@ -6,28 +6,28 @@ const products = [
     id: 1,
     title: 'Vita Coco\nCoco Ralado',
     description: 'Coco Ralado Integral Congelado.\nProduto 100% Natural de origem.\nPeso Líquido: 500g',
-    image: '/dotan.github.io/vita-coco.jpg',
+    image: '/images/vita-coco.jpg',
     category: 'Congelados'
   },
   {
     id: 2,
     title: 'Tartuffi Cacau\nChocolates Artesanais',
     description: 'Descrição linha 1\nDescrição linha 2\nDescrição linha 3',
-    image: '/dotan.github.io/tartuffi.jpeg',
+    image: '/images/tartuffi.jpeg',
     category: 'Chocolates'
   },
   {
     id: 3,
     title: 'Good Suco\nSucos Naturais',
     description: 'Descrição linha 1\nDescrição linha 2\nDescrição linha 3',
-    image: '/dotan.github.io/good-suco.jpeg',
+    image: '/images/good-suco.jpeg',
     category: 'Bebidas'
   },
   {
     id: 4,
     title: 'Top-Mix\nCreme Pasteurizado',
     description: 'Descrição linha 1\nDescrição linha 2\nDescrição linha 3',
-    image: '/dotan.github.io/top-mix.jpg',
+    image: '/images/top-mix.jpg',
     category: 'Congelados'
   },
 ];
