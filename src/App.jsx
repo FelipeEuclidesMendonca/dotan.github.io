@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
-import About from './pages/About';
+import Sobre from './pages/Sobre';
 import theme from './theme';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/produtos" element={<Products />} />
           <Route path="/contato" element={<Contact />} />
-          <Route path="/sobre" element={<About />} />
+          <Route path="/sobre" element={<Sobre />} />
         </Routes>
       </Router>
     </ThemeProvider>
