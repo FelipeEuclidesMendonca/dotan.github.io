@@ -134,7 +134,7 @@ const Contact = () => {
                     {
                       icon: <PhoneIcon sx={{ fontSize: 30 }} />,
                       title: 'Telefone',
-                      content: '(11) 1234-5678'
+                      content: '+55 (48) 8833-6852'
                     },
                     {
                       icon: <EmailIcon sx={{ fontSize: 30 }} />,

@@ -85,7 +85,7 @@ const Sobre = () => {
                 animation: `${float} 6s ease-in-out 0.5s infinite`
               }}
             >
-              Qualidade e sabor em cada detalhe desde 2010
+              Qualidade e sabor em cada detalhe desde 2024
             </Typography>
           </Box>
         </Container>
@@ -382,7 +382,7 @@ const Sobre = () => {
           >
             <Box sx={{ position: 'relative', zIndex: 2 }}>
               <Typography variant="body1" paragraph>
-                Fundada em 2010, nossa empresa nasceu do sonho de oferecer produtos alimentícios de alta qualidade 
+                Fundada em 2024, nossa empresa nasceu do sonho de oferecer produtos alimentícios de alta qualidade 
                 para o mercado brasileiro. Começamos com uma pequena linha de produtos e, ao longo dos anos, 
                 expandimos nossa atuação para incluir uma variedade de itens que atendem às necessidades 
                 dos nossos clientes.

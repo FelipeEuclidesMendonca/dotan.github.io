@@ -4,6 +4,7 @@ import CakeIcon from '@mui/icons-material/Cake';
 import LocalDrinkIcon from '@mui/icons-material/LocalDrink';
 import IcecreamIcon from '@mui/icons-material/Icecream';
 import { keyframes } from '@mui/system';
+import { Link as RouterLink } from 'react-router-dom';
 
 // Animação para o efeito de flutuação
 const float = keyframes`
@@ -97,6 +98,8 @@ const Home = () => {
                 <Button
                   variant="contained"
                   size="large"
+                  component={RouterLink}
+                  to="/produtos"
                   sx={{
                     py: 2,
                     px: 4,
@@ -120,7 +123,7 @@ const Home = () => {
       </Box>
 
       {/* Produtos em Destaque */}
-      <Box sx={{ py: 8, position: 'relative' }}>
+      <Box id="produtos" sx={{ py: 8, position: 'relative' }}>
         <Container maxWidth="lg">
           <Typography 
             variant="h2" 
