@@ -34,7 +34,7 @@ const Navbar = () => {
         <img 
           src="/images/logo-dotan.png" 
           alt="Dotan Logo" 
-          style={{ height: '40px' }} 
+          style={{ height: '50px' }} 
         />
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon />
@@ -102,7 +102,7 @@ const Navbar = () => {
             <img 
               src="/images/logo-dotan.png" 
               alt="Dotan Logo" 
-              style={{ height: '40px' }} 
+              style={{ height: '50px' }} 
             />
           </Box>
           
